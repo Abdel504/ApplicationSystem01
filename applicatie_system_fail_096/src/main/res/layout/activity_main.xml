@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hoofdcontainer van het scherm -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#FAFAFA">
+
+    <!-- Label boven het invoerveld -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voer een wachtwoord in:"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Invoerveld voor wachtwoord (gevoelig) -->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wachtwoord"
+        android:inputType="textPassword"
+        android:background="@android:drawable/edit_text"
+        android:padding="8dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Knop: inloggen (in fail versie slaat ook op) -->
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inloggen" />
+
+    <!-- Knop: opgeslagen wachtwoord ophalen (werkt in fail) -->
+    <Button
+        android:id="@+id/btnLoad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wachtwoord ophalen"
+        android:layout_marginTop="8dp" />
+
+    <!-- Resultaat/feedback onderin -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nog niets opgehaald"
+        android:textSize="16sp"
+        android:paddingTop="16dp"
+        android:gravity="center_horizontal" />
+</LinearLayout>
